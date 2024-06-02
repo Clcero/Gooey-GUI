@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl8d06mmqnou2"]
+
+[ext_resource type="Texture2D" uid="uid://bs2pkpv16hc80" path="res://icon.svg" id="1_cvw72"]
+
+[node name="UI" type="CanvasLayer"]
+process_priority = 5
+follow_viewport_enabled = true
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 1.0
+offset_right = 164.0
+offset_bottom = 117.0
+tooltip_text = "This is UI?"
+item_count = 3
+icon_scale = 0.5
+item_0/text = "One"
+item_0/icon = ExtResource("1_cvw72")
+item_1/text = "Two"
+item_1/disabled = true
+item_2/text = "Three"
