@@ -1,0 +1,172 @@
+[gd_scene load_steps=5 format=3 uid="uid://df6gypphjmns"]
+
+[ext_resource type="Script" path="res://scripts/ColorMenu.gd" id="1_b3vcq"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xdb0b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t57fm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i37lt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.413711, 0.508669, 0.285586, 1)
+
+[node name="ColorMenu" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -162.0
+offset_right = 144.0
+offset_bottom = 188.0
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_xdb0b")
+script = ExtResource("1_b3vcq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorMenu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -108.0
+offset_right = 63.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CheckButton1" type="CheckButton" parent="ColorMenu/VBoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t57fm")
+text = "Color #1"
+
+[node name="CheckButton2" type="CheckButton" parent="ColorMenu/VBoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t57fm")
+text = "Color #2"
+
+[node name="CheckButton3" type="CheckButton" parent="ColorMenu/VBoxContainer"]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t57fm")
+text = "Color #3"
+
+[node name="Button" type="Button" parent="ColorMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i37lt")
+text = "Reset"
+
+[node name="ColorGrid" type="GridContainer" parent="ColorMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.5
+offset_top = 10.0
+offset_right = 64.5
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 45
+columns = 3
+
+[node name="Panel1" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0980392, 0.12549, 1, 1)
+
+[node name="Panel2" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.648265, 0.755136, 1, 1)
+
+[node name="Panel3" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0210483, 0, 0.446713, 1)
+
+[node name="Panel4" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel5" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel6" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel7" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel7"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.61339, 0.61339, 0.61339, 1)
+
+[node name="Panel8" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel8"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.411765, 0.509804, 0.286275, 1)
+
+[node name="Panel9" type="Panel" parent="ColorMenu/ColorGrid"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ColorMenu/ColorGrid/Panel9"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.61339, 0.61339, 0.61339, 1)
+
+[connection signal="pressed" from="ColorMenu/VBoxContainer/CheckButton1" to="ColorMenu" method="_on_check_button_1_pressed"]
+[connection signal="pressed" from="ColorMenu/VBoxContainer/CheckButton2" to="ColorMenu" method="_on_check_button_2_pressed"]
+[connection signal="pressed" from="ColorMenu/VBoxContainer/CheckButton3" to="ColorMenu" method="_on_check_button_3_pressed"]
+[connection signal="pressed" from="ColorMenu/VBoxContainer/Button" to="ColorMenu" method="_on_button_pressed"]
