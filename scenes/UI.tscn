@@ -21,6 +21,7 @@ layout_mode = 2
 text = "Settings"
 
 [node name="TabContainer" type="TabContainer" parent="Control/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/TabContainer"]
@@ -34,28 +35,63 @@ text = "Label"
 layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer"]
-visible = false
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 2
 tooltip_text = "Does this work?"
 
-[node name="CheckButton" type="CheckButton" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button 1"
-
-[node name="CheckButton2" type="CheckButton" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button 2"
-
-[node name="CheckButton3" type="CheckButton" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-text = "Button 3"
-
 [node name="Label" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label4" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label5" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label6" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label7" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label8" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label9" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label10" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label11" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label12" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label13" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label14" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Scroll me"
+
+[node name="Label15" type="Label" parent="Control/MarginContainer/VBoxContainer/TabContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "Scroll me"
 
