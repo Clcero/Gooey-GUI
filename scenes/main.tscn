@@ -1,13 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://brwx3v4ejkm8w"]
+[gd_scene load_steps=2 format=3 uid="uid://brwx3v4ejkm8w"]
 
-[ext_resource type="PackedScene" uid="uid://bl8d06mmqnou2" path="res://scenes/UI.tscn" id="1_nk5xw"]
 [ext_resource type="PackedScene" uid="uid://crvrhs1emychq" path="res://scenes/combine.tscn" id="2_4th1b"]
 
 [node name="Main" type="Node"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 324)
-
-[node name="CanvasLayer" parent="." instance=ExtResource("1_nk5xw")]
+visible = false
+position = Vector2(549, 329)
 
 [node name="Combine" parent="." instance=ExtResource("2_4th1b")]
