@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://crvrhs1emychq"]
+[gd_scene load_steps=5 format=3 uid="uid://crvrhs1emychq"]
 
+[ext_resource type="Script" path="res://scenes/combine.gd" id="1_7dvln"]
 [ext_resource type="Texture2D" uid="uid://bs2pkpv16hc80" path="res://icon.svg" id="1_xxoev"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfo1i"]
@@ -14,6 +15,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+script = ExtResource("1_7dvln")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 0
@@ -32,3 +34,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xfo1i")
 theme_override_styles/focus = SubResource("StyleBoxFlat_mvf35")
 icon = ExtResource("1_xxoev")
 expand_icon = true
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]
