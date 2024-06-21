@@ -1,8 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://crvrhs1emychq"]
 
-[ext_resource type="Texture2D" uid="uid://cyr1f3cv3a2cd" path="res://assets/UI/Computer/Windows_Button.png" id="1_1ryko"]
-[ext_resource type="Texture2D" uid="uid://cffjc2e25ymay" path="res://assets/UI/Computer/Windows_Button_Pressed.png" id="2_8qlw0"]
-[ext_resource type="Texture2D" uid="uid://biliwcxfk3xq4" path="res://assets/UI/Computer/blisshill.png" id="3_deubi"]
+[ext_resource type="Texture2D" uid="uid://bs2pkpv16hc80" path="res://icon.svg" id="2_kja1x"]
+[ext_resource type="Texture2D" uid="uid://c561t5g2wwlmq" path="res://assets/UI/Computer/Windows_Ratio.png" id="3_rm3l2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ftva"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Combine" type="CanvasLayer"]
 
@@ -12,14 +14,7 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Background" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("3_deubi")
-expand_mode = 1
-
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
+[node name="Window" type="PanelContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021
@@ -31,408 +26,52 @@ offset_top = -21.288
 offset_right = 44.752
 offset_bottom = 27.152
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Control/Window"]
 layout_mode = 2
 theme_override_constants/margin_top = 0
 
-[node name="Minesweeper" type="GridContainer" parent="Control/PanelContainer/MarginContainer"]
+[node name="Items" type="HBoxContainer" parent="Control/Window/MarginContainer"]
 layout_mode = 2
-theme_override_constants/h_separation = -1
-theme_override_constants/v_separation = -1
-columns = 7
+size_flags_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
+[node name="Item1" type="MenuButton" parent="Control/Window/MarginContainer/Items"]
 layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
+text = "Item 1"
+item_count = 1
+popup/item_0/text = "Godot"
+popup/item_0/icon = ExtResource("2_kja1x")
+popup/item_0/id = 0
 
-[node name="TextureButton16" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
+[node name="Item2" type="MenuButton" parent="Control/Window/MarginContainer/Items"]
 layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
+text = "Item 2"
+item_count = 2
+popup/item_0/text = "Godot"
+popup/item_0/icon = ExtResource("2_kja1x")
+popup/item_0/id = 0
+popup/item_1/text = "Radio"
+popup/item_1/icon = ExtResource("3_rm3l2")
+popup/item_1/id = 1
 
-[node name="TextureButton17" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
+[node name="Label" type="Label" parent="Control/Window/MarginContainer/Items"]
 layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
+text = "Result: "
+label_settings = SubResource("LabelSettings_4ftva")
 
-[node name="TextureButton18" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton19" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton20" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton21" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton22" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton23" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton24" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton25" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton26" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton27" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton28" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton29" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton30" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton31" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton32" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton33" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton34" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton35" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton36" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton37" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton38" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton39" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton40" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton41" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton42" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton43" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton44" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton45" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton46" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton47" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton48" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton49" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton50" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton51" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton52" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton53" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton54" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton55" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton56" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton57" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton58" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton59" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton60" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton61" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton62" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton63" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton2" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton3" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton4" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton5" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton6" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton7" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton8" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton9" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton10" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton11" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton12" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton13" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton14" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="TextureButton15" type="TextureButton" parent="Control/PanelContainer/MarginContainer/Minesweeper"]
-layout_mode = 2
-texture_normal = ExtResource("1_1ryko")
-texture_pressed = ExtResource("2_8qlw0")
-texture_focused = ExtResource("2_8qlw0")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Window/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Window/MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Press this"
 text = "Submit"
 expand_icon = true
 
-[node name="Button2" type="Button" parent="Control/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Reset"

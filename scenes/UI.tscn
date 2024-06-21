@@ -4,7 +4,6 @@
 
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = 5
-visible = false
 script = ExtResource("1_cknh8")
 
 [node name="Control" type="Control" parent="."]

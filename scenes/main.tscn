@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://brwx3v4ejkm8w"]
+[gd_scene load_steps=3 format=3 uid="uid://brwx3v4ejkm8w"]
 
+[ext_resource type="Texture2D" uid="uid://biliwcxfk3xq4" path="res://assets/UI/Computer/blisshill.png" id="1_hww3u"]
 [ext_resource type="PackedScene" uid="uid://crvrhs1emychq" path="res://scenes/combine.tscn" id="2_4th1b"]
 
 [node name="Main" type="Node"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-position = Vector2(549, 329)
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_hww3u")
+expand_mode = 1
 
 [node name="Combine" parent="." instance=ExtResource("2_4th1b")]
