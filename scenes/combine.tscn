@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://crvrhs1emychq"]
+[gd_scene load_steps=6 format=3 uid="uid://crvrhs1emychq"]
 
+[ext_resource type="Script" path="res://scenes/Clicker.gd" id="1_de1n8"]
 [ext_resource type="Texture2D" uid="uid://bs2pkpv16hc80" path="res://icon.svg" id="2_kja1x"]
 [ext_resource type="Texture2D" uid="uid://c561t5g2wwlmq" path="res://assets/UI/Computer/Windows_Ratio.png" id="3_rm3l2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ftva"]
 font_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_3vcpu"]
+font_size = 41
+font_color = Color(0.051971, 0.051971, 0.051971, 1)
+
 [node name="Combine" type="CanvasLayer"]
+script = ExtResource("1_de1n8")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -62,16 +68,24 @@ label_settings = SubResource("LabelSettings_4ftva")
 layout_mode = 2
 size_flags_vertical = 8
 
+[node name="Counter" type="Label" parent="Control/Window/MarginContainer/VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_3vcpu")
+horizontal_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/Window/MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Plus1" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Press this"
-text = "Submit"
+text = "+1"
 expand_icon = true
 
-[node name="Button2" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Minus1" type="Button" parent="Control/Window/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "Reset"
+text = "-1"
+
+[connection signal="pressed" from="Control/Window/MarginContainer/VBoxContainer/HBoxContainer/Plus1" to="." method="_on_plus_1_pressed"]
+[connection signal="pressed" from="Control/Window/MarginContainer/VBoxContainer/HBoxContainer/Minus1" to="." method="_on_minus_1_pressed"]
